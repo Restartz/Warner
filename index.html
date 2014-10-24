@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Warner Verduijn</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+        <link href='http://fonts.googleapis.com/css?family=Poiret+One|Quicksand' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="./css/style.css"/>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.17.8/js/jquery.tablesorter.min.js"></script>
+        <script type="text/javascript" src="http://www.youtube.com/iframe_api"></script>
+        <script src="./js/main.js"></script>
+    </head>
+    
+    <body>
+        
+        <div class="header">
+            <div class="gradient"></div>
+            <div class="info">
+                <div class="logo"><img src="./img/logo.png" alt="Warner Veruijn"></div>
+                <div class="subtext">Warner Verduijn, Composer</div>
+            </div>
+        </div>
+
+        <div class="bgcolor">  
+            <i class="playpause showhand fa fa-play fa-lg"></i>
+            <div class="bar">
+                <div class="player"> 
+                    
+                    <audio class="audio" preload="none">
+                        <source src="" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <div class="progressbar showhand">        
+                        <div class="progress">
+                            <div class="time"></div>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="duration pull-right"></div>
+                    <div class="title"></div>
+                </div>
+            </div>
+
+            <div class="youtube-player">
+                <div class="video-wrapper">
+                    <i class="close fa fa-times fa-2x"></i>
+                    <div class="responsive-video-wrapper">
+                        <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <table class="songlist tablesorter">
+                    <thead>
+                        <tr>
+                            <th class="title"><span class="headtext">TITLE</span></th>
+                            <th class="video"></th>
+                            <th class="genre"><span class="headtext">GENRE</span></th>
+                            <th class="time"><span class="headtext">TIME</span></th>
+                            <th class="added"><span class="headtext">ADDED</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- songs inserted by js -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="footer">
+                <div class="contact"><i class="fa fa-envelope fa-lg"></i> warnerverduijn <i class="fa fa-at"></i> hotmail . com</a>
+                </div>
+                <div class="pow">
+                    <a class="soundcloud" href="https://soundcloud.com/inphra"><img src="./img/soundcloud-light.png" alt="powered by soundcloud"></a>
+                    <span class="and">& <i class="fa fa-laptop fa-lg"></i> JANDER</span>
+                </div>
+                <span class="copy">&copy; 2014 Warner Verduijn. All rights reserved.</span>
+        </div>
+    </body>
+</html>
