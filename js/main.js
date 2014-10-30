@@ -32,7 +32,11 @@ $(function(){
         }); 
         
         $('.song').click(function() {
-            playSong($(this).attr('id'));
+            if ($(this).attr('id') == $('.bar .player .audio').attr("data-key")) 
+                $('.playpause').click();
+            else
+                playSong($(this).attr('id'));
+            
         });
         
         $('.youtube-icon').click(function(e) {
