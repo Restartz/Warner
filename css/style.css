@@ -10,7 +10,7 @@ body
     font-family: Lucida Sans Unicode, sans-serif;
     margin: 0;
     
-    background: #00001d url('/img/wallpaper.jpg') no-repeat;
+    background: #00001d url('../img/wallpaper.jpg') no-repeat;
     background-attachment: fixed;  
     background-position: center center;
     background-size: cover;
@@ -134,6 +134,7 @@ body
     top: 30px;
     left: -40px;
     transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
     width: 500px;
     z-index: 2;
 }
@@ -301,23 +302,23 @@ body
 
 
 .youtube-icon {
-    background: url('/img/YouTube_light_color_icon.png') no-repeat;
+    background: url('../img/YouTube_light_color_icon.png') no-repeat;
     background-position: center center;
     background-size: contain;
     height: 23px;
 }
 .songlist tbody tr:hover .youtube-icon {
-    background: url('/img/YouTube-icon-dark.png') no-repeat;
+    background: url('../img/YouTube-icon-dark.png') no-repeat;
     background-position: center center;
     background-size:contain;
 }
 .songlist tbody tr:hover .youtube-icon:hover {
-    background: url('/img/YouTube-icon-full_color.png') no-repeat;
+    background: url('../img/YouTube-icon-full_color.png') no-repeat;
     background-position: center center;
     background-size:contain;
 }
 .songlist .playing .youtube-icon {
-    background: url('/img/YouTube-icon-dark.png') no-repeat;
+    background: url('../img/YouTube-icon-dark.png') no-repeat;
     background-position: center center;
     background-size:contain;
 }
