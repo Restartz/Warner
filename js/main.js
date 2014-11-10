@@ -13,7 +13,7 @@ $(function(){
     $.getJSON( alltracks, function(data) {
         $.each(data, function(key, track) {
             var song = 
-            '<tr id="'+key+'" class="song showhand" data-stream="'+track.stream_url + '?client_id=eee8ba9091def29e417285ce6138212b">\
+            '<tr id="'+track.permalink+'" class="song showhand" data-stream="'+track.stream_url + '?client_id=eee8ba9091def29e417285ce6138212b">\
                 <td class="title">'+track.title+'</td>\
                 <td class="video">'+ ((/\/[^ ]+/i.test(track.tag_list))?'<div class="youtube-icon" data-yt="'+ track.tag_list.match(/\/[^ ]+/i)[0] +'"></div>':'') +'</td>\
                 <td class="genre">'+track.genre+'</td>\
@@ -54,6 +54,11 @@ $(function(){
             
             $('.youtube-player').show();
         });
+        
+        //autostart
+        if (window.location.hash && $(window.location.hash).length > 0) {
+            playSong(window.location.hash.substring(1));
+        }
     });
     
     $('.youtube-player').click(function () {
