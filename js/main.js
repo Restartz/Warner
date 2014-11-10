@@ -13,7 +13,7 @@ $(function(){
     $.getJSON( alltracks, function(data) {
         $.each(data, function(key, track) {
             var song = 
-            '<tr id="'+track.permalink+'" class="song showhand" data-stream="'+track.stream_url + '?client_id=eee8ba9091def29e417285ce6138212b">\
+            '<tr id="'+key+'" class="'+track.permalink+' song showhand" data-stream="'+track.stream_url + '?client_id=eee8ba9091def29e417285ce6138212b">\
                 <td class="title">'+track.title+'</td>\
                 <td class="video">'+ ((/\/[^ ]+/i.test(track.tag_list))?'<div class="youtube-icon" data-yt="'+ track.tag_list.match(/\/[^ ]+/i)[0] +'"></div>':'') +'</td>\
                 <td class="genre">'+track.genre+'</td>\
@@ -56,8 +56,12 @@ $(function(){
         });
         
         //autostart
-        if (window.location.hash && $(window.location.hash).length > 0) {
-            playSong(window.location.hash.substring(1));
+        if (window.location.hash) {
+            var classlink = '.' + window.location.hash.substring(1);
+            if ($(classlink).length > 0) {
+                var id = $(classlink).attr('id');
+                playSong(id);
+            }            
         }
     });
     
